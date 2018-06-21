@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MUTUA // SEGUROS</title>
+	<meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!--<link rel="icon" type="image/png" href="img/favicon.png" />-->
+	<link rel="stylesheet" type="text/css" href="css/globalstyle.css">
+	<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<header>
+		<div class="maxContainer">
+			<img src="images/logo.png" id="logoMutua" alt="logotipo">
+			<p id="telefono">¡Vente ya a la Mutua! 	&nbsp;<span>900 555 117</span></p>
+			<!-- <p id="telefono_movil"><span>900 555 117</span></p> -->
+
+			<div id="clickToCall">
+				<div class="form">
+					<form class="inputBox" method="POST" id="theForm" name="theForm" action="">
+		            	<input type="tel" maxlength="9" pattern="[6-9][0-9]{8}" class="field-form" placeholder="Deja tu teléfono" id="PhoneNumber" name="PhoneNumber" maxlength="9" required>
+		         
+        				<div class="boton rosa" id="callYouBox">
+							<a id="bot_envio2" onClick="javascript:enviarform();"><p>Te llamamos GRATIS<p></a>
+						</div>
+		            	
+			            <input type="hidden" name="CampaignId" id="CampaignId" value="1972" />
+			            
+       				 </form>
+				</div>
+				<p class="legal">Pulsando el botón aceptas la <a target="_blank" href="http://www.mutua.es/seguros/condiciones.jsp">política legal</a></p>
+			</div>
+		</div>
+	</header>
+	<div id="wrap">
+		<div id="slider" class="section">
+			<div class="maxContainer">
+				<div class="bloqueLeft">
+					<div id="titulo">
+						<div class="fichaAzul"></div>
+						<p class="t1">Coche</p>
+					</div>
+
+					<a target="_blank" href="https://www.mutua.es/seguros-coche/jsp/seguro-coche.jsp">
+						<div class="boton rosa" id="calcularSeguro">
+							<p>
+								Calcular seguro coche
+								<img src="images/iconoCoche.png" width="31" alt="icono_coche">
+							</p>
+						</div>
+					</a>
+					
+					<p id="t2">¿Te han subido el precio del <span style="display: inline-block;">seguro de coche</span>? </p>
+
+					<div class="claim">
+						<p class="t1">VENTE A LA MUTUA Y SEA CUAL SEA</p>
+						<p class="t2">TE LO BAJAMOS.</p>
+					</div>
+
+					<!-- <p id="promocion"><a href="http://www.mutua.es/seguros/condiciones.jsp">Ver condiciones de la promoción</a></p> -->
+
+				</div>
+				<div class="bloqueRight">
+					<div id="clickToCallBox">
+						<p id="t1">Te llamamos ya</p>
+						<div class="form">
+							<form class="inputBox" method="POST" id="theForm2" name="theForm2" action="">
+				            	<input type="tel" maxlength="9" pattern="[6-9][0-9]{8}" class="field-form" placeholder="Deja tu teléfono" id="PhoneNumber2" name="PhoneNumber2" maxlength="9" required>
+	            				<div class="boton rosa" id="callYouBox">
+									<a id="bot_envio" onClick="javascript:enviarform2();"><p>Te llamamos GRATIS<p></a>
+								</div>
+				            	
+					            <input type="hidden" name="CampaignId" id="CampaignId" value="1972" />
+	           				 </form>	
+						</div>
+						<p class="legal">Pulsando el botón aceptas la <a target="_blank" href="http://www.mutua.es/seguros/condiciones.jsp">política legal</a></p>
+					</div>
+
+					<a target="_blank" href="https://www.mutua.es/seguros-coche/jsp/seguro-coche.jsp">
+						<div class="boton rosa" id="calcularSeguro">
+							<p>
+								Calcular seguro coche
+								<img src="images/iconoCoche.png" width="31" alt="icono_coche">
+							</p>
+						</div>
+					</a>
+
+				</div>
+			</div>
+		</div>
+		<div id="seguros" class="section">
+			<div class="maxContainer">
+				<div class="bloque">
+
+					<div class="imagen">
+						<div class="imagenSeguro" id="imgMoto"></div>
+						<!-- <img src="images/imgMoto.jpg" alt="imagen_moto" width="324"> -->
+						<div class="tituloImg">
+							<div class="fichaAzul"></div>
+							<p class="t1">Moto</p>
+						</div>
+						<div class="precio">
+							<p>
+								Desde<br>
+								<span>98€</span>
+							</p>
+						</div>
+					</div>
+
+					<p class="descripcion">Trae tu scooter a la Mutua <span>desde 98€.<br>Vente YA y te damos 50€</span></p>
+					
+					<a target="_blank" href="https://www.mutua.es/seguros-coche/jsp/seguro-moto.jsp">
+						<div class="boton rosa" id="">
+							<p>
+								Calcular seguro moto
+								<img src="images/iconoMoto.png" width="30" alt="icono_moto">
+							</p>
+						</div>
+					</a>	
+				</div>
+
+				<div class="bloque center">
+					<div class="imagen">
+						<div class="imagenSeguro" id="imgHogar"></div>
+						<!-- <img src="images/imgCasa.jpg" alt="imagen_hogar" width="324"> -->
+						<div class="tituloImg">
+							<div class="fichaAzul"></div>
+							<p class="t1">Hogar</p>
+						</div>
+						<div class="precio">
+							<img src="images/descuento.png" alt="descuento" width="84">
+						</div>
+					</div>
+
+					<p class="descripcion">Tu seguro de hogar te puede<br>salir gratis el primer año, porque<br><span>te puedes ahorrar hasta 100€</span></p>
+					
+					<a target="_blank" href="https://www.mutua.es/seguros-hogar/action/main?execution=e1s1">
+						<div class="boton rosa" id="">
+							<p>
+								Calcular seguro hogar
+								<img src="images/iconoCasa.png" width="24" alt="icono_casa">
+							</p>
+						</div>
+					</a>	
+				</div>
+
+				<div class="bloque seguroLeft">
+					<div class="imagen">
+						<div class="imagenSeguro" id="imgVida"></div>
+						<!-- <img src="images/imgVida.jpg" alt="imagen_vida" width="324"> -->
+						<div class="tituloImg">
+							<div class="fichaAzul"></div>
+							<p class="t1">Vida</p>
+						</div>
+						<div class="precio">
+							<img src="images/precioVida.png" alt="vida" width="45">
+						</div>
+					</div>
+
+					<p class="descripcion">Protege a tu familia<br>desde <span>7€/mes</span></p>
+					
+					<a target="_blank" href="https://www.mutua.es/vida-familia/presupuesto">
+						<div class="boton rosa" id="">
+							<p>
+								Calcular seguro vida
+								<img src="images/iconoCorazon.png" width="24" alt="icono_vida">
+							</p>
+						</div>
+					</a>	
+				</div>
+			</div>
+		</div>
+		<div id="razones" class="section">
+			<div class="maxContainer">
+				<div class="bloqueLeft">
+					<div class="centerVertical">
+						<div id="imagenRazones"></div>
+						<!-- <img src="images/imgPorque.jpg" alt="imagen_razones" id="imagenRazones" width="337"> -->
+					</div>
+				</div>
+				<div class="bloqueRight">
+					<div class="centerVertical">
+						<p class="t1">¿Por qué tu seguro con la Mutua?</p>
+						<ul>
+							<li>
+								<div class="numero"><p>1</p></div>
+								<p class="text">Pago en 3 meses sin intereses</p>
+							</li>
+							<li>
+								<div class="numero"><p>2</p></div>
+								<p class="text">La opción que va contigo: Productos y coberturas, para encajar tu presupuesto a tus necesidades</p>
+							</li>
+							<li>
+								<div class="numero"><p>3</p></div>
+								<p class="text">Trámites online: Calcula, contrata y gestiona tu seguro sin moverte de casa</p>
+							</li>
+						</ul>
+						
+						<a target="_blank" href="https://www.mutua.es/seguros-coche/jsp/seguro-coche.jsp">
+							<div class="boton rosa" id="">
+								<p>
+									Calcular seguro coche
+									<img src="images/iconoCoche.png" width="24" alt="icono_seguro_coche">
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="aval" class="section">
+			<div class="maxContainer">
+				<p class="titulo">Los números nos avalan</p>
+				<div class="bloque">
+					<div class="circulo">
+						<img src="images/iconoN1.png" alt="icono_n1" width="21">
+						<p>Nº1</p>
+					</div>
+					<p class="datos">
+						La aseguradora
+						mejor valorada de
+						auto en España 
+					</p>
+				</div>	
+				<div class="bloque">
+					<div class="circulo">
+						<img src="images/iconoFidelidad.png" alt="icono_fidelidad" width="21">
+						<p style="margin-top: 7px;">93%</p>
+					</div>
+					<p class="datos">
+						Fidelidad de
+						nuestros clientes 
+					</p>
+				</div>		
+				<div class="bloque">
+					<div class="circulo">
+						<img src="images/iconoPersonas.png" alt="icono_clientes" width="38">
+						<p style="line-height: 10px;">9,3<br><span>millones de clientes</span></p>
+					</div>
+					<p class="datos">
+						Muchos años de
+						experiencia y 9,3
+						millones de clientes 
+					</p>
+				</div>		
+				<div class="bloque">
+					<div class="circulo">
+						<img src="images/iconoBeneficios.png" alt="icono_beneficios" width="24">
+						<p style="margin-top: 7px;">€ Mill</p>
+					</div>
+					<p class="datos">
+						Todos los 
+						beneficios revierten 
+						en ti cada año.
+					</p>
+				</div>	
+			</div>
+		</div>
+		
+		<div id="ayuda" class="section">
+			<div class="maxContainer">
+				<p class="titulo">¿Eres mutualista y necesitas ayuda?</p>
+
+				<div class="botonCentro">
+					<a target="_blank" href="http://www.mutua.es/seguros-coche/contacta-con-nosotros.jsp">
+						<div class="boton_azul left">
+							<p>ATENCION AL CLIENTE</p>
+							<img src="images/iconoAtencion.png" width="20" alt="icono_atencion_cliente">
+						</div>
+					</a>
+					
+					<a target="_blank"href="http://www.mutua.es/seguros-coche/asistencia.jsp">
+						<div class="boton_azul left" id="boton_azul_2">
+							<p>ASISTENCIA EN VIAJE</p>
+							<img src="images/iconoAsistencia.png" width="24" alt="icono_asistencia_viaje">
+						</div>
+					</a>
+
+					<a target="_blank" href="https://www.mutua.es/areapersonal/mm/acceso">
+						<div class="boton_azul left">
+							<p>ÁREA PERSONAL</p>
+							<img src="images/iconoAreapersonal.png" width="19" alt="icono_area_personal">
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="footer" class="section">
+			<div class="maxContainer">
+				<div class="footer_desktop">
+					<div class="bloqueLeft">
+						<div class="bloqueLeft">
+
+							<p class="legal" id="contratacion">Consulte condiciones de contratación en <a href="http://www.mutua.es">www.mutua.es</a></p>
+							
+							<a target="_blank" href="http://www.mutua.es/seguros-coche/asistencia.jsp">Asistencia en carretera</a>
+							<a target="_blank" href="http://www.mutua.es/seguros-coche/contacta-con-nosotros.jsp">Atención al cliente</a>
+							<a target="_blank" href="https://www.mutua.es/areapersonal/mm/acceso">Acceso al Área personal</a>
+							
+							<p class="legal">Mutua Madrileña &#169;2016<span> | </span><a target="_blank" href="http://www.mutua.es/seguros/politica-cookies.jsp">Política de Cookies</a><span> | </span><a target="_blank" href="http://www.mutua.es/seguros/autorizaciones.jsp">Legal</a></p>
+						</div>
+
+						<div class="bloqueRight">	
+							<a target="_blank" href="http://www.mutua.es/seguros/condiciones-generales.jsp">Condiciones de Seguro de Coche</a>
+							<a target="_blank" href="http://www.mutua.es/recursos/seguros-vida/pdf/VIDAFAMILIA.pdf">Condiciones de Seguro de Vida</a>
+							<a target="_blank" href="http://www.mutua.es/recursos/seguros-hogar/pdf/CONDICIONADO_HOGAR_MMGLOBAL.pdf">Condiciones de Seguro de Hogar</a>
+						</div>	
+					</div>
+
+					<div class="bloqueRight">
+						<div class="footerRight">
+							<a target="_blank" href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.mutua.es&lang=es"><img width="82px" src="images/logoComprasegura.png" /></a>
+							<a target="_blank" href="http://certiaccesibilidad.technosite.es/Recursos/Certificado.aspx?codigo=bzyoakzeuownvuweewlz140277871BZYOAKZEUOWNVUWEEWLZU"><img width="142.5px" src="images/logoAA.png"/></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="footer_movil">
+
+					<p class="legal" id="contratacion">Consulte condiciones de contratación en <a href="http://www.mutua.es">www.mutua.es</a></p>
+					
+					<a target="_blank" href="http://www.mutua.es/seguros-coche/asistencia.jsp">Asistencia en carretera</a>
+					<a target="_blank" href="http://www.mutua.es/seguros-coche/contacta-con-nosotros.jsp">Atención al cliente</a>
+					<a target="_blank" href="https://www.mutua.es/areapersonal/mm/acceso">Acceso al Área personal</a>
+
+					<a target="_blank" href="http://www.mutua.es/seguros/condiciones-generales.jsp">Condiciones de Seguro de Coche</a>
+					<a target="_blank" href="http://www.mutua.es/recursos/seguros-vida/pdf/VIDAFAMILIA.pdf">Condiciones de Seguro de Vida</a>
+					<a target="_blank" href="http://www.mutua.es/recursos/seguros-hogar/pdf/CONDICIONADO_HOGAR_MMGLOBAL.pdf">Condiciones de Seguro de Hogar</a>
+					
+					<div class="footerMovil_iconos">
+						<a target="_blank" href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&dn=www.mutua.es&lang=es"><img id="compra_segura" width="82px" src="images/logoComprasegura.png" /></a>
+						<a target="_blank" href="http://certiaccesibilidad.technosite.es/Recursos/Certificado.aspx?codigo=bzyoakzeuownvuweewlz140277871BZYOAKZEUOWNVUWEEWLZU"><img id="logoAA" width="142.5px" src="images/logoAA.png"/></a>
+					</div>
+
+					<p class="legal"  id="footerLegal">Mutua Madrileña &#169;2016<span> | </span><a target="_blank" href="http://www.mutua.es/seguros/politica-cookies.jsp">Política de Cookies</a><span> | </span><a target="_blank" href="http://www.mutua.es/seguros/autorizaciones.jsp">Legal</a></p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<!-- js libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/app.js"></script>
+
+	<script type="text/javascript">
+    function callFromObject(o, p, c){
+      var url = "webphone.html?w="+o+"&p="+p+"&c="+c;
+      var left = parseInt((screen.availWidth/2) - (400/2));
+      var top = parseInt((screen.availHeight/2) - (400/2));
+      var especificaciones="top="+top+", left="+left+", toolbar=no, location=no, status=no, menubar=no , titlebar=no,width=400,height=401, resizable=0, scrollbars=0";
+      var titulo="";
+      window.open(url,titulo,especificaciones);
+    }
+
+    function enviarform(){
+      if( document.theForm){
+        var tlf1=$("#PhoneNumber").val();
+        if(!isNaN(tlf1)){
+          var tlf = parseInt($("#PhoneNumber").val());
+          callFromObject(1972, tlf, true);
+          return false;
+        }else{
+          $("#pcontent").html("Debes insertar un teléfono válido<br>(que sea siempre de 9 o más cifras)<br/>Debes rellenar tu móvil");
+          $("p#dialog-title").html("<div class='errorMessage'>&nbsp;</div>");
+          $('#modal_error').modal();					return false;
+        }
+      } else {
+        var tlf1=$("#PhoneNumber").val();
+        if(!isNaN(tlf1)){
+          // $("#pcontent").html("Debes aceptar la política legal");
+          $("p#dialog-title").html("<div class='errorMessage'>&nbsp;</div>");
+          $('#modal_error').modal();					return false;
+        }else{
+          $("#pcontent").html("Debes insertar un teléfono válido<br/>(que sea siempre de 9 o más cifras)<br>Debes rellenar tu móvil");
+          $("p#dialog-title").html("<div class='errorMessage'>&nbsp;</div>");
+          $('#modal_error').modal();
+          return false;
+        }
+      }
+    }
+    function enviarform2(){
+      if( document.theForm2){
+        var tlf1=$("#PhoneNumber2").val();
+        if(!isNaN(tlf1)){
+          var tlf = parseInt($("#PhoneNumber2").val());
+          callFromObject(1972, tlf, true);
+          return false;
+        }else{
+          $("#pcontent").html("Debes insertar un teléfono válido<br>(que sea siempre de 9 o más cifras)<br/>Debes rellenar tu móvil");
+          $("p#dialog-title").html("<div class='errorMessage'>&nbsp;</div>");
+          $('#modal_error').modal();					return false;
+        }
+      } else {
+        var tlf1=$("#PhoneNumber2").val();
+        if(!isNaN(tlf1)){
+          // $("#pcontent").html("Debes aceptar la política legal");
+          $("p#dialog-title").html("<div class='errorMessage'>&nbsp;</div>");
+          $('#modal_error').modal();					return false;
+        }else{
+          $("#pcontent").html("Debes insertar un teléfono válido<br/>(que sea siempre de 9 o más cifras)<br>Debes rellenar tu móvil");
+          $("p#dialog-title").html("<div class='errorMessage'>&nbsp;</div>");
+          $('#modal_error').modal();
+          return false;
+        }
+      }
+    }
+
+
+	</script>
+	
+</body>
+</html>

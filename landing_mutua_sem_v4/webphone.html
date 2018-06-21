@@ -1,0 +1,628 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<style>
+* {	padding:0px; margin:0px; border:0px; outline: 0;} input::-moz-focus-inner { border: 0; }
+body { background:#333; font-family: Trebuchet MS, Trebuchet, Verdana, Helvetica, Arial, sans-serif; font-size:14px; }
+#contenedor, #contpub { width:400px; height:400px; position:absolute; top:50%; left:50%; margin-top:-200px; margin-left:-200px; background:#FFF; }
+#WPHcabecera img { width:400px; height:60px; }
+#formulario { margin:0 auto; width:400px; text-align:center; list-style:none; }
+	#formulario input {
+		width:173px; height:26px; padding:0 10px 0 30px; margin-bottom:6px; background:url(https://app.webphone.net/form/%7B%22img%22%3A%22form-mutua.png%22%7D);
+		text-align:center; line-height:26px; font-size:15px; font-style:italic; color:#999; text-shadow:0 -1px 0 #FFF;
+	}
+	#formulario textarea {
+		width:173px; height:84px; padding:0 10px 0 30px; margin-bottom:6px; background:url(https://app.webphone.net/form/%7B%22img%22%3A%22form-mutua.png%22%7D);
+		text-align:center; line-height:16px; font-size:15px; font-style:italic; color:#999; text-shadow:0 -1px 0 #FFF;
+	}
+	#formulario #contTelefono input{
+		padding:0 10px 0 5px;
+		background:none;
+		width:165px;
+	}
+	#bandera_es{
+		cursor:default;
+		position:absolute;
+		top:6px;
+		left:9px;
+		margin-left:-4px;
+	}
+	#flags{
+		position:absolute;
+		top:6px;
+		left:35px;
+	}
+	#flags img{
+		margin-left:10px;
+	}
+	#formulario #contTelefono #flags input{
+		position:absolute;
+		width:50px;
+		height:18px;
+		margin-left: 20px;
+		top:0px;
+		font-size:12px; font-style:italic;
+	}
+	#formulario #contNombre input { background-position:0 0; }
+	#formulario #contTelefono {
+		position:relative;
+		background:url(https://app.webphone.net/form/%7B%22img%22%3A%22form-mutua.png%22%7D) no-repeat;
+		background-position:0 -29px;
+		width:173px;
+		height:26px;
+		padding:0 10px 0 30px;
+		/*margin-bottom:6px; left:94px;*/
+		margin:0 auto 6px auto;
+	}
+	#formulario #contEmail input { background-position:0 -57px; }
+	#formulario #contMessage textarea { background-position:0 -85px; }
+	#formulario input.inputActivo { color:#000; font-style:normal; font-size:17px; }
+	#formulario #contBoton input { width:215px; height:29px; padding:0; margin:0; background-position:0 -169px; cursor:pointer; }
+		#formulario #contBoton input{color:#ffffff;}
+		#formulario #contBoton input:hover { background-position:0 -200px;}
+		#formulario #contBoton input:active { background-position:0 -230px;}
+	#WPHpie {
+		width:146px;
+		position:absolute;
+		bottom:10px;
+		right:10px;
+ 	}
+	#WPHpie a {
+		width:136px;
+		height:16px;
+		display:block;
+		padding:5px;
+	}
+	#WPHtitulo { color:#666; text-align:center; font-size:16px; margin:25px 15px; }
+	#WPHdescripcion { margin:15px 15px; text-align:center; font-size:12px; }
+	#errors { margin:5px 50px; text-align:center; font-size:12px; color:#F253A5}
+	#formCentralita { color:#666; font-weight:bold; }
+	/*publicidad*/
+	#contpub {
+		background:url(%7B%22img%22%3A%22contactando_con_el_usuario.gif%22%7D) no-repeat center bottom;
+	}
+	#mensajeError { text-align:center; font-weight:bold; color:#FF0000; }
+	#cabecerapubli, #contpubli, #piepubli{ display:none; }
+	#aceptoCondiciones{
+		text-align: center;
+		font-size: 10px;
+		color: #666;
+	}
+	#aceptoCondiciones input { /*float:left; /*zoom:1;*/
+		vertical-align: middle;
+		position: relative;
+		bottom: 0px; font-size: 12px; transform: scale(1.2);-webkit-transform: scale(1.2);}
+	#aceptoCondiciones span { text-decoration:underline; }
+	#condiciones {
+		width:360px;
+		height:260px;
+		padding:20px;
+		position:absolute;
+		top:60px;
+		display:none;
+		overflow:auto;
+		/*text-align:center; */
+		font-size:10px;
+		line-height:13px;
+		cursor:pointer;
+		border-bottom:1px solid #DDD;
+		background:url(https://app.webphone.net/form/%7B%22img%22%3A%22cerrar.png%22%7D) #FFF 360px 6px no-repeat;
+	}
+	#aceptoCondiciones a:link{
+		color: #666;
+		text-decoration:none;
+	}
+	#aceptoCondiciones a:visited{
+		color:#0560AD;
+		text-decoration:none;
+
+	}
+
+	#aceptoCondiciones a:hover{
+		text-decoration:underline;
+		color:#0560AD;
+	}
+
+
+	#country{
+		margin: 10px 0px 10px 0px;
+	}
+
+	ul.input-list-form li{
+		list-style: none !important;
+	}
+
+
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+var callInicialited = false;
+var posted = null;
+
+function isMobile(){
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+};
+
+
+function showError(msg, cont, end){
+	var auxDescription = $("#"+cont).html();
+	auxDescription = cleanStr(auxDescription);
+	msg = cleanStr(msg);
+	$("#"+cont).html(""+msg+"");
+	if(!end) setTimeout("showError('"+auxDescription+"', '"+cont+"', true);", 3000);
+};
+
+function showMgs(txt){
+	$('#errors').html(txt);
+	setTimeout(function(){ $('#errors').html('');}, 4000);
+};
+
+function wphCall(idObject){
+		var phoneNumberValue = $("#phoneNumber");
+		  if(/[6789][0-9]{8}/.test($('#phoneNumber').val())){
+			if(wph.isOnSchedule(idObject)){
+				wph.callFromObject(idObject ,$('#phoneNumber').val());
+				initStatus();
+			}else{
+				$('#WPHtitulo').hide( "slow" );
+				$("#WPHdescripcion").css('margin', '8px');
+				$('#contNombre').show( "slow" );
+				$('#contEmail').show( "slow" );
+				$('#contMessage').show( "slow" );
+				$('#env').val('ENVIAR');
+				$("#WPHdescripcion").html('El Servico de atención al cliente es de 09:00 a 22:00, <br> déjenos sus datos y lo llamaremos lo antes posible');
+				$('#env').attr('onclick', 'checkScheduleForm();');
+			}
+		}else{
+			showMgs("Debe introducir un teléfono válido");
+			phoneNumberValue.focus();
+		}
+		
+};
+
+function formDisplay(status){
+	$('#WPHtitulo').css('display', status);
+	$('#WPHdescripcion').css('display', status);
+	$('#formCentralita').css('display', status);
+	$('#aceptoCondiciones').css('display', status);
+	$('#env').prop('disabled', false);
+	return true;
+};
+
+
+function initStatus(){
+	$('#env').prop('disabled', true);
+	var msgCont = $("<div/>",{
+		id: "msgCont"
+	});
+	msgCont.css('top', '250px');
+	msgCont.css('width', '400px');
+	msgCont.css('position', 'absolute');
+	msgCont.css('text-align', 'center');
+	msgCont.css('color', '#F253A5');
+	msgCont.html('UN MOMENTO POR FAVOR');
+	$("#contenedor").css('background-image', 'url(https://app.webphone.net/form/%7B%22img%22%3A%221_llamando-al-usuario.gif%22%7D)');
+	if(isMobile()){
+		$('#contenedor').css('backgroundPosition', '-47px');
+		msgCont.css('width', '305px');
+	}
+	formDisplay("none");
+	$("#contenedor").append(msgCont).show('slow');;
+	callInicialited = true;
+	return true;
+};
+
+
+function restartForm(){
+	$("#msgCont").remove();
+	$("#contenedor").css('background-image', 'none');
+	formDisplay("block");
+	callInicialited = false;
+	$('#phoneNumber').val('Introduce tu teléfono');
+
+};
+
+function restartToContactForm(){
+	$("#msgCont").hide('slow');
+	$("#contenedor").css('background-image', 'none');
+	$("#WPHdescripcion").css('margin', '8px');
+	formDisplay("block");
+	callInicialited = false;
+};
+
+
+function cleanStr(auxDescription){
+	auxDescription = auxDescription.replace(/\"/g, '\"');
+	auxDescription = auxDescription.replace(/\'/g, "\'");
+	auxDescription = auxDescription.replace(/\n/g, "");
+	return auxDescription;
+};
+
+function showCallEnd(msg, showForm){
+	$("#contenedor").css('background-image', 'url(https://app.webphone.net/form/%7B%22img%22%3A%224_llamada-finalizada.gif%22%7D)');
+	$("#msgCont").html(msg);
+	if(showForm) setTimeout(restartForm(), 3000);
+	wph.closeAllIframes();
+	return true;
+};
+
+
+
+function sendStatusCallback(status){
+	if(!callInicialited) initStatus();
+	if(isMobile()){
+		$('#contenedor').css('backgroundPosition', '-47px');
+		$('#msgCont').css('width','300px');
+	}
+	if(status){
+		switch(status){
+				case "oncall" : {
+					//System call to the user
+					$("#contenedor").css('background-image', 'url(https://app.webphone.net/form/%7B%22img%22%3A%221_llamando-al-usuario.gif%22%7D)');
+					$("#msgCont").html('EN BREVE RECIBIRÁ UNA LLAMADA </br> EN EL NÚMERO INDICADO');
+					break;
+				}
+				case "onanswerusr" : {
+					//System call to the user
+					$("#contenedor").css('background-image', 'url(https://app.webphone.net/form/%7B%22img%22%3A%222_usuario-establecido-cliente.gif%22%7D)');
+
+					$("#msgCont").html('USUARIO ESTABLECIDO');
+					break;
+				}
+				case "onanswercli" : {
+					//System call to the user
+					$("#contenedor").css('background-image', 'url(https://app.webphone.net/form/%7B%22img%22%3A%223_conexion-establecida.gif%22%7D)');
+					$("#msgCont").html('LA CONEXIÓN SE HA ESTABLECIDO CON ÉXITO.</br>EN UNOS INSTANTES PODRÁ HABLAR CON UN AGENTE');
+					break;
+				}
+				case "onhangup" : {
+					//System call to the user
+					$("#contenedor").css('background-image', 'url(https://app.webphone.net/form/%7B%22img%22%3A%224_llamada-finalizada.gif%22%7D)');
+					$("#msgCont").html('LLAMADA FINALIZADA');
+					setTimeout('showCallEnd("", true)', 3000);
+
+					break;
+				}
+				case "onerror" : {
+					//System call to the user
+					$("#contenedor").css('background-image', 'url(https://app.webphone.net/form/%7B%22img%22%3A%221e_error-llamando-al-usuario.gif%22%7D)');
+					$("#msgCont").html('SI QUIERE USTED HABLAR EN OTRO MOMENTO,</br>LLÁMENOS AL:</br></br>902 555 550');
+					setTimeout('showCallEnd("", true)', 5000);
+					break;
+				}
+			}
+		}
+
+};
+
+
+
+
+var sendSchedule = 0;
+
+function setScheduleEvents(){
+	sendSchedule = 0;
+	$("#env, #name, #phoneNumber, #email ").keypress(function(event){
+		if(event.which == 13) {
+			if(sendSchedule == 0){
+				event.stopPropagation();
+				sendSchedule++;
+				checkScheduleForm();
+			}
+		}
+	});
+
+	$("#env").click(function(){
+		if(sendSchedule == 0){
+			sendSchedule++;
+			checkScheduleForm();
+		}
+	});
+};
+
+
+
+function checkScheduleForm(){
+
+	var env = {cliTime:new Date().getTime()};
+	var enviar = false;
+	var nameValue = $("#name");
+	var phoneNumberValue = $("#phoneNumber");
+	var prefixValue = "0034";
+	var emailValue = $("#email");
+	var messageValue = $("#message");
+	// var legalAcept = $("#aceptoLegal");
+	env.idObj = obj;
+	env.idUrl = wph.idUrl;
+	env.token = wph.token;
+	env.krid = wph.krid;
+	env._idObj = wph.getObj(obj).iframe._idObject;
+	env.cmd = 'schedule';
+	env.prefix = prefixValue;
+	var url =  wph.getObj(obj).iframe.content[0].src;
+
+	// if( ! $("#aceptoLegal").is(":checked") ){
+	// 	showMgs("Debes aceptar la políticas de privacidad");
+	// 	return false;
+	// }
+
+	//name
+	if(nameValue.length > 0){
+		if(nameValue.val() != 'Introduce tu nombre'){
+			env.name = nameValue.val();
+			enviar = true;
+		}
+		else{
+			enviar = false;
+			showError("Debes especificar un nombre", "WPHdescripcion", false);
+			nameValue.focus();
+			setScheduleEvents();
+			return false;
+		}
+	}
+	//email
+	if(emailValue.length > 0){
+		if( /[\w-\.]{3,}@([\w-]{2,}\.)*([\w-]{2,}\.)[\w-]{2,4}/.test(emailValue.val()) ){
+			env.email = emailValue.val();
+			enviar = true;
+		}
+		else{
+			enviar = false;
+			showError("Debe especificar un email correcto", "WPHdescripcion", false);
+			emailValue.focus();
+			setScheduleEvents();
+			return false;
+		}
+	}
+	//phoneNumber
+	if(phoneNumberValue.val() != 'Introduce tu teléfono'){
+		var auxPhoneNumber = phoneNumberValue.val().replace(/\([0-9]{4,}\)/i, "");
+		if(auxPhoneNumber.length >= 4){
+			env.phoneNumber = auxPhoneNumber;
+			enviar = true;
+		}
+		else{
+			enviar = false;
+			showError("Debes especificar un número de telefono válido", "WPHdescripcion", false);
+			phoneNumberValue.focus();
+			setScheduleEvents();
+			return false;
+			//error = "Debes especificar un número de telefono válido";
+		}
+	}
+	else{
+		enviar = false;
+		showError("Debes especificar un número de telefono válido", "WPHdescripcion", false);
+		phoneNumberValue.focus();
+		setScheduleEvents();
+		return false;
+		//error = "Debes especificar un número de telefono válido";
+	}
+	//message
+	if(messageValue.length > 0){
+		if(messageValue.val() != 'Introduce tu consulta' && messageValue.val() != 'Introduce tu mensaje'){
+			env.message = messageValue.val();
+			enviar = true;
+		}
+		else{
+			enviar = false;
+			showError("Debes especificar un comentario", "WPHdescripcion", false);
+			messageValue.focus();
+			setScheduleEvents();
+			return false;
+		}
+	}
+
+	if(enviar){
+		//enviamos formulario
+		sendForm(env, url);
+
+	}
+	else{
+		setScheduleEvents();
+		return false;
+	}
+
+};
+
+function sendForm(env, url){
+	env.cliTime = new Date().getTime();
+	posted = env;
+	$.ajax({
+		data: env,
+		type: "POST",
+		dataType: "json",
+		url: url,
+		complete: function(jqXHR, textStatus){
+			var res = $.parseJSON(jqXHR.responseText);
+			sendFormCallback(res);
+		}
+	});
+	return true;
+};
+
+
+function sendFormCallback(res){
+	switch(res.cmd){
+		case "schedule" : {
+			if(res.result == "1"){
+				//formulario guardado correctamente (eliminamos )
+				$('#formCentralita').html('');
+				$('#aceptoCondiciones').css('display', 'none');
+				$('#WPHdescripcion').html('<br/><br/><br/><br/><br/><div id="webphone">Gracias por facilitarnos tus datos, en la máxima brevedad posible nos pondremos en contacto contigo.</div>');
+			}
+			else{
+				//error guardando formulario
+				showError('<br/>Ha habido un error guardando el formulario. Por favor inténtelo de nuevo en unos segundos.', 'WPHdescripcion', false);
+			}
+			break;
+		}
+		default : {
+			break;
+		}
+	}
+	return true;
+};
+
+function wphCallDirect(idObject){
+	if(wph.isLibLoaded){
+		if(wph.isOnSchedule(idObject)){
+			wph.callFromObject(idObject ,$('#phoneNumber').val());
+		}else{
+			restartToContactForm();
+			$('#WPHtitulo').hide( "slow" );
+			$('#contNombre').show( "slow" );
+			$('#contEmail').show( "slow" );
+			$('#contMessage').show( "slow" );
+			$('#env').val('ENVIAR');
+			$("#WPHdescripcion").html('El Servico de atención al cliente es de 09:00 a 22:00, <br> déjenos sus datos y lo llamaremos lo antes posible');
+			$('#env').attr('onclick', 'checkScheduleForm();');
+		}
+	}else{
+		restartForm();
+		showMgs("Parece que no se ha podido realizar la llamada </br> inténtelo de nuevo. Muchas gracias");
+	}
+};
+
+
+$(document).ready(function(){
+	$("#buttonShowLegal, #condiciones, #otroquenoexiste").click(function(){
+		if($("#condiciones").css("display") == "none") $("#condiciones").slideDown('slow');
+		else $("#condiciones").slideUp('slow');
+	});
+
+	if(isMobile()){
+		$("#contenedor").css('width', '300px');
+		$("#contenedor").css('margin-left','-150px');
+		$("#formulario").css('width', '300px');
+		$('#WPHcabecera img:first-child').css('width', '300px');
+		$('#WPHcabecera img:first-child').css('height', '47px');
+		$('#aceptoCondiciones').css('width','80%');
+		$('#aceptoCondiciones').css('margin-left','30px');
+		$('#aceptoCondiciones').css('margin-top','18px');
+		$('#condiciones').css('width','260px');
+		$('#WPHLine-bottom').css('background', 'none');
+		$('#WPHLine-bottom').css('border-top', 'none');
+		$('#condiciones').css('top','47px');
+		$('#condiciones').css('background','url(https://app.webphone.net/form/%7B%22img%22%3A%22cerrar.png%22%7D) #FFF 268px 6px no-repeat');
+	}
+
+	$('#contNombre').css('display', 'none');
+	$('#contEmail').css('display', 'none');
+	$('#contMessage').css('display', 'none');
+});
+</script>
+
+
+
+
+
+
+<title>¿Necesitas ayuda? Nosotros te llamamos.</title>
+</head>
+<body>
+<object id="webphoneObject" type="button/webphone" classid="webphone" style="display: none;">
+    	<param name="oncall" value="sendStatusCallback('oncall');"></param>
+    	<param name="onanswerusr" value="sendStatusCallback('onanswerusr');"></param>
+		<param name="onanswercli" value="sendStatusCallback('onanswercli');"></param>
+		<param name="onhangup" value="sendStatusCallback('onhangup');"></param>
+		<param name="onerror" value="sendStatusCallback('onerror');"></param>
+		<param name="iframedisplay" value="none">
+</object>
+<div id="contenedor">
+	<div id="WPHcabecera">
+		<a href='javascript:void(0);'>
+			<img src='images/logo-w.jpg' border='0'/>
+		</a>
+	</div>
+	<!-- formulario -->
+	<div id="WPHtitulo">
+		¿Necesitas ayuda? Nosotros te llamamos.
+	</div>
+	<div id="WPHdescripcion">
+		Servicio GRATUITO de atención telefónica.
+	</div>
+	<div id="formCentralita">
+		<form name="webphone" action="javascript:void(0);">
+			<ul id="formulario">
+				<li id="contNombre">
+					<input id="name" type="text" onblur="this.value=!this.value?'Introduce tu nombre':this.value;" value="Introduce tu nombre" autocomplete="false" name="name" class="c_ld" onclick="this.value='';" onfocus="this.select();this.className='inputActivo'"/>
+				</li>
+				<li id="contEmail">
+					<input id="email" type="text" onblur="this.value=!this.value?'Introduce tu email':this.value;" value="Introduce tu email" autocomplete="false" name="email" class="c_ld" onclick="this.value='';" onfocus="this.select();this.className='inputActivo'"/>
+				</li>
+
+				<li>
+					<div id="contTelefono">
+						<input id="phoneNumber" name="phoneNumber" style="display:block;" type="tel" autocomplete="false"  class="c_ld" onclick="this.value='';" onfocus="this.select();this.className='inputActivo'" onblur="this.value=!this.value?'Introduce tu teléfono':this.value;" value="Introduce tu teléfono" />
+					</div>
+				</li>
+				<li id="contMessage">
+					<textarea id="message" name="message" class="c_ld" onblur="this.value=!this.value?'Introduce tu mensaje':this.value;" onclick="this.value='';" onfocus="this.select();this.className='inputActivo'">Introduce tu consulta</textarea>
+				</li>
+			    <li id="contBoton">
+			    	<input id="env" name="env" type="button" onclick="" title="SOLICITAR LLAMADA" value="SOLICITAR LLAMADA"/>
+			    	<input type="hidden" id="formType" value="call"/>
+			    	<input type="hidden" id="voiceMail" value="0"/>
+
+			    </li>
+			</ul>
+		</form>
+		<div id="errors"></div>
+	</div>
+
+	<!-- fin formulario -->
+
+	<!--<div id="aceptoCondiciones">
+		<input type="checkbox" id="aceptoLegal" />
+		<a href="javascript:void(0);" id="buttonShowLegal" title="click para ver condiciones legales">
+			He leído y acepto la cláusula de protección de datos
+		</a>
+	</div> -->
+	<ul id="aceptoCondiciones" class="input-list-form">
+		<li>
+		<input type="checkbox" id="aceptoLegal" />
+			<a href="javascript:void(0);" id="buttonShowLegal" title="click para ver condiciones legales">He leído y acepto la política de privacidad
+		</a>
+		</li>
+	</ul>
+	<div id="condiciones" style="display:none;">
+		<p style="text-align: justify;">El usuario, cada vez que acceda a la presente Web, deber&aacute; revisar la siguiente pol&iacute;tica de protecci&oacute;n de datos de car&aacute;cter persona, dado que podr&iacute;a haber sufrido alguna modificaci&oacute;n o actualizaci&oacute;n. Regir&aacute; en cualquier caso, la pol&iacute;tica de protecci&oacute;n de datos de car&aacute;cter personal que estuviera publicada en la presente Web en el momento en que efectivamente se produzca el acceso a la misma. El acceso y uso de la presente p&aacute;gina Web, supone conocer y aceptar la siguiente pol&iacute;tica de protecci&oacute;n de datos de car&aacute;cter personal:</p>
+<p style="text-align: justify;"><strong>Mutua Madrile&ntilde;a Automovilista</strong>, Sociedad de Seguros a Prima Fija, as&iacute; como cualquiera de sus <a href="http://www.mutua.es/seguros/autorizaciones.jsp">empresas del grupo</a>, adoptar&aacute;n las medidas de &iacute;ndole t&eacute;cnica y organizativas necesarias que garanticen la seguridad de los datos de car&aacute;cter personal y eviten su alteraci&oacute;n, p&eacute;rdida, tratamiento o acceso no autorizado, habida cuenta del estado de la tecnolog&iacute;a, la naturaleza de los datos almacenados y los riesgos a que est&aacute;n expuestos.</p>
+<p style="text-align: justify;">No se registrar&aacute;n datos de car&aacute;cter personal en ficheros que no re&uacute;nan las condiciones establecidas en la normativa de protecci&oacute;n de datos de car&aacute;cter personal.</p>
+<p style="text-align: justify;">El usuario es responsable de la veracidad y actualizaci&oacute;n de los datos que vaya a facilitar a trav&eacute;s de la presente p&aacute;gina Web. Si el usuario va a facilitar datos de car&aacute;cter personal de terceros a trav&eacute;s de la presente p&aacute;gina Web, deber&aacute; informar previamente a &eacute;stos, del contenido de la cl&aacute;usula de protecci&oacute;n de datos que sea aplicable para el usuario, as&iacute; como obtener su consentimiento, siempre que fuere preciso.</p>
+<p style="text-align: justify;">Los datos de car&aacute;cter personal que vayan a ser recabados por <strong>Mutua Madrile&ntilde;a Automovilista</strong>, Sociedad de Seguros a Prima Fija o por cualquiera de sus empresas del grupo, ser&aacute;n en todo caso adecuados, pertinentes y no excesivos, en relaci&oacute;n con el &aacute;mbito y las finalidades determinadas y leg&iacute;timas para las que se vayan a obtener.</p>
+<p style="text-align: justify;">Previamente a la contrataci&oacute;n de alg&uacute;n producto y/o servicio ofrecido a trav&eacute;s de la presente p&aacute;gina web, usted tendr&aacute; acceso a la cl&aacute;usula de protecci&oacute;n de datos que regule el mismo, la cual se encuentra recogida <strong>en el condicionado general del producto y/o servicio que vaya a ser solicitado o contratado por usted</strong>. Se le requerir&aacute; en el proceso de contrataci&oacute;n o de solicitud, que acepte dichas condiciones, a los efectos de poder gestionar su contrato o solicitud. A trav&eacute;s de la cl&aacute;usula de protecci&oacute;n de datos, se le informar&aacute; detalladamente del concreto tratamiento de datos que ser&aacute; realizado por Mutua Madrile&ntilde;a Automovilista, Sociedad de Seguros a Prima Fija o la empresa de su grupo con la que vaya a contratar o a solicitar alg&uacute;n tipo de contrato. Igualmente, se obtendr&aacute;n los consentimientos necesarios para los tratamientos de datos que vayan a ser realizados, todo ello, de conformidad con lo dispuesto en la Ley Org&aacute;nica 15/1999, de 13 de diciembre, de protecci&oacute;n de Datos de Car&aacute;cter Personal. Usted podr&aacute; ejercitar sus derechos de acceso, rectificaci&oacute;n, cancelaci&oacute;n y oposici&oacute;n, mediante comunicaci&oacute;n escrita a tal efecto, debiendo dirigir la misma al responsable del tratamiento (la entidad del grupo Mutua Madrile&ntilde;a con la que vaya a contratar o a solicitar alg&uacute;n servicio). Las domicilios de las citadas sociedades del Grupo las tiene disponibles en el punto primero del aviso legal de la presente p&aacute;gina Web.</p>
+	</div>
+	<div id="WPHpie">
+		<a href='http://www.webphone.net' target='_blank'><img src='https://app.webphone.net/form/%7B%22img%22%3A%22img_pie.png%22%7D' border='0'/></a>
+	</div>
+</div>
+<script type="text/javascript">
+	var parameters = location.search.substring(1).split("&");
+    var temp = parameters[0].split("=");
+    var obj = unescape(temp[1]);
+    temp = parameters[1].split("=");
+    var phone = unescape(temp[1]);
+    temp = parameters[2].split("=");
+    var check = unescape(temp[1]);
+    if(/[6789][0-9]{8}/.test(phone)) $('#phoneNumber').val(phone);
+    // if(check == "true") $('#aceptoLegal').prop('checked', check);
+    if(obj) { $('#webphoneObject').prop('id', obj);$('#env').attr('onclick', "wphCall("+obj+");");}
+    document.write('<scr'+'ipt type="text/javascript" async="true" src="//app.webphone.net/script/script.js"></scr'+'ipt>');
+    if(/[6789][0-9]{8}/.test($('#phoneNumber').val())){
+		if(obj){
+			initStatus();
+			setTimeout(function(){
+      			wphCallDirect(obj);
+				},6000);
+		}
+	}
+</script>
+</body>
+</html>
